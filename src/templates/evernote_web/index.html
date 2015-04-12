@@ -1,0 +1,17 @@
+{% extends 'evernote_web/mobile-layout.html'%}
+{% block title %}
+首页-我的笔记本
+{% endblock %}
+
+
+{% block m-title %}
+<h1>我的笔记本-{{user_name}}</h1>
+{% endblock %}
+
+{% block m-content %} 
+<ul data-role="listview">
+	{% for book in notebooks %}    
+	     <li><a href="/web/{{user_id}}/{{book.id}}" data-transition="slide">{{book.name}}<span class="ui-li-count">{{book.count}}</span></a></li>
+	{% endfor %}  
+</ul>
+{% endblock %}

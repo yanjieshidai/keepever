@@ -1,0 +1,18 @@
+{% extends 'evernote_web/mobile-layout.html'%}
+{% block title %}
+我的笔记
+{% endblock %}
+
+
+{% block m-title %}
+<a href="#" data-role="button" data-rel="back" >返回</a>
+<h1>我的笔记-{{notebook}}</h1>
+{% endblock %}
+
+{% block m-content %} 
+ <ul data-role="listview">
+	{% for n in notes %}    
+	  <li data-icon="false"><a href="javascript:void(0)">{{n.name}}</a></li>
+  	{% endfor %}  
+</ul>
+{% endblock %}

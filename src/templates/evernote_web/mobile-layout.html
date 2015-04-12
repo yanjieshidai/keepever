@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block css %}
+<link rel="stylesheet" href="/static/common/jquery.mobile/jquery.mobile-1.4.5.min.css">
+{% endblock %}
+{% block script %}
+<script src="/static/common/jquery/jquery.min.js"></script>
+<script src="/static/common/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<div data-role="page" id="pageone"> 
+  <div data-role="header">
+    {% block m-title %}<h1>标题</h1>{% endblock %}
+  </div>
+
+  <div data-role="content">
+    {% block m-content %}{% endblock %}
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    {% block m-buttom %}<h1>底部</h1>{% endblock %}
+  </div>
+</div> 
+{% endblock %}
